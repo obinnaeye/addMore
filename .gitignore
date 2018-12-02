@@ -3,3 +3,5 @@ env/
 node_modules
 config.py
 .vscode
+__pycache__
+migrations
