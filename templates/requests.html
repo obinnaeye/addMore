@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Feature Request</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="{{url_for('static', filename='js/main.js')}}"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <h1> Feature Request</h1>
+        <p>Here is a list of the features requsted by clients</p>
+        <table>
+          <tr>
+            <th id="title">Title</th>
+            <th id="description">Description</th> 
+            <th id="client">Client</th>
+            <th id="priority">Client Priority</th>
+            <th id="date">Target Date</th> 
+            <th id="area">Product Area</th>
+          </tr>
+          {% for featurerequest in featurerequests %}
+          <tr>
+            <td>{{ featurerequest.Title }}</td>
+            <td>{{ featurerequest.Description }}</td> 
+            <td>{{ featurerequest.ClientID }}</td>
+            <td>{{ featurerequest.ClientPriority }}</td>
+            <td>{{ featurerequest.TargetDate }}</td> 
+            <td>{{ featurerequest.ProductArea }}</td>
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
