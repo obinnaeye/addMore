@@ -11,12 +11,12 @@ $(document).ready(function(){
       url: "http://127.0.0.1:5000/feature-request",
       contentType: "application/json; charset=utf-8",
       data: JSON.stringify({
-        title, 
-        description,
-        client,
-        product_area,
-        target_date,
-        client_priority
+        Title: title, 
+        Description: description,
+        ClientID: client,
+        ProductArea: product_area,
+        TargetDate: target_date,
+        ClientPriority: client_priority
       }),
       success: function(result){
         console.log(result)
