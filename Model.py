@@ -11,7 +11,7 @@ db = SQLAlchemy()
 
 class Client(db.Model):
     __tablename__ = 'clients'
-    ClientID = db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.Integer, primary_key=True)
     ClientName = db.Column(db.String(250), nullable=False)
     creation_date = db.Column(db.TIMESTAMP, server_default=db.func.current_timestamp(), nullable=False)
 
@@ -21,14 +21,14 @@ class Client(db.Model):
 
 class FeatureRequest(db.Model):
     __tablename__ = 'featurerequests'
-    FeatureRequestID = db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.Integer, primary_key=True)
     Title = db.Column(db.String(250), nullable=False)
     Description = db.Column(db.String(250), nullable=False)
     TargetDate = db.Column(db.DateTime, nullable=False)
     ClientPriority = db.Column(db.Integer, nullable=False)
     ProductArea = db.Column(db.String(250), nullable=False)
-    ClientID = db.Column(db.Integer, db.ForeignKey('clients.ClientID', ondelete='CASCADE'), nullable=False)
-    Client = db.relationship('Client', backref=db.backref('featurerequests', lazy='dynamic' ))
+    ClientID = db.Column(db.Integer, db.ForeignKey('clients.id', ondelete='CASCADE'), nullable=False)
+    client = db.relationship('Client', backref=db.backref('featurerequests', lazy='dynamic' ))
 
     def __init__(self, Title, Description, TargetDate, ClientPriority, ProductArea, ClientID):
         self.Title = Title
@@ -40,12 +40,12 @@ class FeatureRequest(db.Model):
 
 
 class ClientSchema(ma.Schema):
-    ClientID = fields.Integer(dump_only=True)
+    id = fields.Integer(dump_only=True)
     ClientName = fields.String(required=True, validate=validate.Length(1))
     creation_date = fields.DateTime()
 
 class FeatureRequestSchema(ma.Schema):
-    FeatureRequestID = fields.Integer(dump_only=True)
+    id = fields.Integer(dump_only=True)
     Title = fields.String(required=True, validate=validate.Length(1))
     Description = fields.String(required=True, validate=validate.Length(1))
     TargetDate = fields.String(required=True, validate=validate.Length(1))
