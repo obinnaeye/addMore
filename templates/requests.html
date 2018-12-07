@@ -25,9 +25,9 @@
           <tr>
             <td>{{ featurerequest.Title }}</td>
             <td>{{ featurerequest.Description }}</td> 
-            <td>{{ featurerequest.ClientID }}</td>
+            <td>{{ client_mapping[featurerequest.ClientID] }}</td>
             <td>{{ featurerequest.ClientPriority }}</td>
-            <td>{{ featurerequest.TargetDate }}</td> 
+            <td>{{ featurerequest.TargetDate[:10] }}</td> 
             <td>{{ featurerequest.ProductArea }}</td>
           </tr>
           {% endfor %}

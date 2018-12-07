@@ -16,10 +16,12 @@
         <div class="form-input title">
           <p>Title: </p>
           <input type="text" id="title" placeholder="Enter request title" />
+          <small id="title-error">Enter a valid title for feature request</small>
         </div>
         <div class="form-input description">
           <p>Description: </p>
           <textarea type="text" id="description" ></textarea>
+          <small id="description-error">Enter a valid description for feature request</small>
         </div>
         <div class="form-input client">
           <p>Cleint: </p>
@@ -32,10 +34,12 @@
         <div class="form-input priority">
           <p>Client Priority: </p>
           <input type="number" id="priority" />
+          <small id="priority-error">Cleint Priority cannot be empty</small>
         </div>
         <div class="form-input date">
           <p>Target Date: </p>
           <input type="date" id="date" />
+          <small id="date-error">Enter a valid Target Date; at least 1 day from now</small>
         </div>
         <div class="form-input product-area">
           <p>Product Area: </p>

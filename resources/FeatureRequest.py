@@ -11,10 +11,15 @@ feture_request_schema = FeatureRequestSchema()
 
 class FeatureRequestResource(Resource):
   def get(self):
+    client_mapping = {
+      1: 'Client A',
+      2: 'Client B',
+      3: 'Client C'
+    }
     headers = {'Content-Type': 'text/html'}
     features = FeatureRequest.query.all()
     featurerequests = feture_requests_schema.dump(features).data
-    return make_response(render_template("requests.html", featurerequests=featurerequests))
+    return make_response(render_template("requests.html", featurerequests=featurerequests, client_mapping=client_mapping))
   
   def post(self):
     json_data = json.loads(request.data)
