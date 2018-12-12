@@ -11,7 +11,7 @@ class TestConfig(object):
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     ENV = 'test'
     TESTING = True
-    SQLALCHEMY_DATABASE_URI = "postgresql://postgres:postgres@localhost/travis_ci_test" 
+    SQLALCHEMY_DATABASE_URI = "postgresql://foo:postgres@localhost/travis_ci_test" 
 
 
 @pytest.yield_fixture(scope='session')
