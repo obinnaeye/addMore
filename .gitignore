@@ -7,3 +7,6 @@ __pycache__
 migrations
 bulkDelete.py
 bulkInsert.py 
+htmlcov
+.coverage
+.coveragerc

@@ -21,38 +21,17 @@ def test_add_feature_request(testapp):
         "ClientPriority": 1
     }
     resp = testapp.post('/feature-request', content_type='application/json', data=json.dumps(request_data))
-
+    print(json.loads(resp.data))
+    assert 'Success' in json.loads(resp.data)['message']
     assert FeatureRequest.query.filter_by(Title="title").count() == 1
     assert Client.query.filter_by(id=1).count() == 1
 
+    resp_no_data = testapp.post('/feature-request', content_type='application/json', data=json.dumps({}))
+    assert 'No input data provided' in json.loads(resp_no_data.data)['message']
 
-# import pytest
-# import app as _app
-# from Model import db as _db, FeatureRequest, Client
+    resp_with_errors = testapp.post('/feature-request', content_type='application/json', data=json.dumps({'Title':5}))
+    assert 'error' in json.loads(resp_with_errors.data)['status']
 
-
-
-
-# @pytest.fixture('module')
-# def client():
-#     app = _app.create_app('test_config')
-#     client = app.test_client()
-#     return client
-
-# # @pytest.fixture('module')
-# # def teardown():
-# #     db.session.remove()
-# #     db.drop_all()
-# #     db.get_engine(app).dispose()
-
-# def test_index(client):
-#     index = client.get('/')
-#     assert b'<p>Title: </p>' in index.data
-
-# def test_get_feature_requests(client):
-#     feature_requests = client.get('/feature-request')
-#     assert b'<th id="title">Title</th>' in feature_requests.data
-
-#     post_feature_requests = client.post('/feature-request')
-#     assert b'nothing' in post_feature_requests.data
-
+    resp_with_clashing_priority = testapp.post('/feature-request', content_type='application/json', data=json.dumps(request_data))
+    assert 'Success' in json.loads(resp_with_clashing_priority.data)['message']
+    assert FeatureRequest.query.filter_by(Title="title").count() == 2
