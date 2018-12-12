@@ -1,8 +1,9 @@
 from flask_restful import Resource
 from flask import Flask, render_template, make_response, jsonify, request
 import json
-from sqlalchemy import or_, and_, text
+from sqlalchemy import or_, and_
 from Model import db, Client, ClientSchema, FeatureRequest, FeatureRequestSchema
+from resources.misc.script import sql
 
 clients_schema = ClientSchema(many=True)
 client_schema = ClientSchema()
@@ -33,16 +34,9 @@ class FeatureRequestResource(Resource):
                       FeatureRequest.ClientID==data['ClientID'])
                     ).first()
     if priority_clash :
-      sql = text('UPDATE FeatureRequests FR '
-                'SET "ClientPriority" = "ClientPriority" + 1 '
-                'WHERE ("ClientID" = :newClientID ' 
-                'AND "ClientPriority" >= :newClientPriority) '
-                'AND EXISTS (SELECT "ClientPriority" FROM FeatureRequests '
-                'WHERE "ClientPriority" = FR."ClientPriority" - 1 '
-                'AND "ClientID" = :newClientID) ').execution_options(autocommit=True)
-      db.engine.execute(sql, newClientPriority=int(data['ClientPriority']), newClientID=int(data['ClientID']))
+      db.engine.execute(sql, newClientPriority=int(data['ClientPriority']), newClientID=int(data['ClientID'])) # pragma: no cover
                 
-    feature_request = FeatureRequest(
+    feature_request = FeatureRequest( # pragma: no cover
       Title=data['Title'], 
       Description=data['Description'],
       TargetDate=data['TargetDate'],
@@ -50,6 +44,6 @@ class FeatureRequestResource(Resource):
       ProductArea=data['ProductArea'],
       ClientID=data['ClientID']
     )
-    db.session.add(feature_request)
-    db.session.commit()
-    return { 'Mesage': 'Success' }
+    db.session.add(feature_request) # pragma: no cover
+    db.session.commit() # pragma: no cover
+    return { 'message': 'Success' } # pragma: no cover
