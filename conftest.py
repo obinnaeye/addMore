@@ -4,6 +4,7 @@ import pytest
 from app import create_app
 from Model import db as _db
 from Model import Client, FeatureRequest
+from config import SQLALCHEMY_DATABASE_URI
 
 class TestConfig(object):
     DEBUG = True
@@ -11,13 +12,14 @@ class TestConfig(object):
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     ENV = 'test'
     TESTING = True
+    SQLALCHEMY_DATABASE_URI = "postgresql://postgres:postgres@localhost/travis_ci_test" 
 
 
 @pytest.yield_fixture(scope='session')
 def app():
     _app = create_app(TestConfig)
     with Postgresql() as postgresql:
-        _app.config['SQLALCHEMY_DATABASE_URI'] = postgresql.url()
+        _app.config['SQLALCHEMY_DATABASE_URI'] = SQLALCHEMY_DATABASE_URI
         ctx = _app.app_context()
         ctx.push()
 
