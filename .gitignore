@@ -8,3 +8,4 @@ migrations
 htmlcov
 .coverage
 .coveragerc
+config.pyc
