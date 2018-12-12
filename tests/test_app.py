@@ -21,8 +21,8 @@ def test_add_feature_request(testapp):
         "ClientPriority": 1
     }
     resp = testapp.post('/feature-request', content_type='application/json', data=json.dumps(request_data))
-    print(json.loads(resp.data))
-    assert 'Success' in json.loads(resp.data)['message']
+
+    assert 'Success' in json.loads(resp.data.decode('utf-8'))['message']
     assert FeatureRequest.query.filter_by(Title="title").count() == 1
     assert Client.query.filter_by(id=1).count() == 1
 
