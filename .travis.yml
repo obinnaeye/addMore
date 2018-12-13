@@ -8,8 +8,8 @@ services:
 before_script:
   - psql -c 'create database addmoretest;' -U postgres
   - python migrateTest.py db init --directory testMigrations 
-  - python migrateTest.py db migrate --directory testMigrations 
-  - python migrateTest.py db upgrade --directory testMigrations 
+  - python migrateTest.py db migrate --directory travisMigrations 
+  - python migrateTest.py db upgrade --directory travisMigrations 
 
 install: pip install -r requirements.txt
 
@@ -18,4 +18,4 @@ script:
   - coverage report
 
 after-success:
-  - codeclimate-test-reporter
+  - codeclimate-test-reporter --file .coverage
