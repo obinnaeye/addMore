@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.com/obinnaeye/addMore.svg?branch=master)](https://travis-ci.com/obinnaeye/addMore)
 [![Code Climate](https://codeclimate.com/github/obinnaeye/addMore/badges/gpa.svg)](https://codeclimate.com/github/obinnaeye/addMore)
-[![Coverage Status](https://coveralls.io/repos/github/aobinnaeye/addMore/badge.svg)](https://coveralls.io/github/obinnaeye/addMore)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/2a126147a4515f9e9490/test_coverage)](https://codeclimate.com/github/obinnaeye/addMore/test_coverage)
 
 # AddMore
  **_Introduction/Background Information_**:
@@ -42,6 +42,8 @@ git clone
 
 # And then..
 cd addmore
+
+# Set up your virtual env and ensure you activate
 
 # Create config file in the root directory
 You can just rename configExample.py to config.py and edit the content to suit your environment
