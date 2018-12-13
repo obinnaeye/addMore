@@ -1,4 +1,6 @@
 [![Build Status](https://travis-ci.com/obinnaeye/addMore.svg?branch=master)](https://travis-ci.com/obinnaeye/addMore)
+[![Code Climate](https://codeclimate.com/github/obinnaeye/addMore/badges/gpa.svg)](https://codeclimate.com/github/obinnaeye/addMore)
+[![Coverage Status](https://coveralls.io/repos/github/aobinnaeye/addMore/badge.svg)](https://coveralls.io/github/obinnaeye/addMore)
 
 # AddMore
  **_Introduction/Background Information_**:
