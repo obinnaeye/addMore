@@ -71,9 +71,14 @@ python app.py
 Navigate to http://127.0.0.1:5000/ to view the app
 To see all feature requests go to http://127.0.0.1:5000/feature-request
 
-# For test
-pytest
+# For test: migrate and upgrade the test db (ensure you've created the db before now)
+python migrateTest.py db init --directory travisMigrations 
+python migrateTest.py db migrate --directory travisMigrations 
+python migrateTest.py db upgrade --directory travisMigrations 
 
+# To run test
+coverage run --source=resources,Model,app -m pytest  (this generates the coverage and also ensures that imports are not skipped in coverage)
+coverage report (this displays the coverage report)
 ```
 
 ## Contributing to the project
