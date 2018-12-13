@@ -4,7 +4,7 @@ import pytest
 from app import create_app
 from Model import db as _db
 from Model import Client, FeatureRequest
-db_url = "postgresql://postgres:mat610@localhost/addmoretest"
+from configTest import SQLALCHEMY_DATABASE_URI as db_url 
 
 class TestConfig(object):
     DEBUG = True
@@ -12,7 +12,7 @@ class TestConfig(object):
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     ENV = 'test'
     TESTING = True
-    SQLALCHEMY_DATABASE_URI = "postgresql://postgres:mat610@localhost/addmoretest"
+    SQLALCHEMY_DATABASE_URI = db_url
 
 
 @pytest.yield_fixture(scope='session')

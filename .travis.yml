@@ -7,7 +7,7 @@ services:
 
 before_script:
   - psql -c 'create database addmoretest;' -U postgres
-  - psql -c "CREATE USER postgres WITH PASSWORD 'mat610';" -U postgres
+  - psql -c "CREATE USER tester WITH PASSWORD 'mat610';" -U postgres
 
 install: pip install -r requirements.txt
 
