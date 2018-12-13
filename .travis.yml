@@ -7,7 +7,7 @@ services:
 
 before_script:
   - psql -c 'create database addmoretest;' -U postgres
-  - python migrateTest.py db init --directory testMigrations 
+  - python migrateTest.py db init --directory travisMigrations 
   - python migrateTest.py db migrate --directory travisMigrations 
   - python migrateTest.py db upgrade --directory travisMigrations 
 
