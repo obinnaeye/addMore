@@ -7,7 +7,9 @@ services:
 
 before_script:
   - psql -c 'create database addmoretest;' -U postgres
-  - psql -c "CREATE USER tester WITH PASSWORD 'mat610';" -U postgres
+  - python migrateTest.py db init --directory testMigrations 
+  - python migrateTest.py db migrate --directory testMigrations 
+  - python migrateTest.py db upgrade --directory testMigrations 
 
 install: pip install -r requirements.txt
 
