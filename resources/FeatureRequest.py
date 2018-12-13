@@ -34,9 +34,9 @@ class FeatureRequestResource(Resource):
                       FeatureRequest.ClientID==data['ClientID'])
                     ).first()
     if priority_clash :
-      db.engine.execute(sql, newClientPriority=int(data['ClientPriority']), newClientID=int(data['ClientID'])) # pragma: no cover
+      db.engine.execute(sql, newClientPriority=int(data['ClientPriority']), newClientID=int(data['ClientID'])) 
                 
-    feature_request = FeatureRequest( # pragma: no cover
+    feature_request = FeatureRequest( 
       Title=data['Title'], 
       Description=data['Description'],
       TargetDate=data['TargetDate'],
@@ -44,6 +44,6 @@ class FeatureRequestResource(Resource):
       ProductArea=data['ProductArea'],
       ClientID=data['ClientID']
     )
-    db.session.add(feature_request) # pragma: no cover
-    db.session.commit() # pragma: no cover
-    return { 'message': 'Success' } # pragma: no cover
+    db.session.add(feature_request) 
+    db.session.commit() 
+    return { 'message': 'Success' } 

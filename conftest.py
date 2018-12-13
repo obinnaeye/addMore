@@ -4,6 +4,7 @@ import pytest
 from app import create_app
 from Model import db as _db
 from Model import Client, FeatureRequest
+db_url = "postgresql://postgres:mat610@localhost/addmoretest"
 
 class TestConfig(object):
     DEBUG = True
@@ -11,20 +12,20 @@ class TestConfig(object):
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     ENV = 'test'
     TESTING = True
-    SQLALCHEMY_DATABASE_URI = "postgresql://foo:postgres@localhost/travis_ci_test" 
+    SQLALCHEMY_DATABASE_URI = "postgresql://postgres:mat610@localhost/addmoretest"
 
 
 @pytest.yield_fixture(scope='session')
 def app():
     _app = create_app(TestConfig)
-    with Postgresql() as postgresql:
-        # _app.config['SQLALCHEMY_DATABASE_URI'] = SQLALCHEMY_DATABASE_URI
-        ctx = _app.app_context()
-        ctx.push()
+    # with Postgresql() as postgresql:
+    _app.config['SQLALCHEMY_DATABASE_URI'] = db_url
+    ctx = _app.app_context()
+    ctx.push()
 
-        yield _app
+    yield _app
 
-        ctx.pop()
+    ctx.pop()
 
 
 @pytest.fixture(scope='session')
@@ -39,10 +40,9 @@ def db(app):
 
     yield _db
 
-    _db.drop_all()
 
 
-@pytest.fixture(scope='session', autouse=True)
+@pytest.fixture(scope='session', autouse=False)
 def session(db):
     connection = db.engine.connect()
     transaction = connection.begin()
@@ -63,4 +63,5 @@ def session(db):
     transaction.rollback()
     connection.close()
     session_.remove()
+
   

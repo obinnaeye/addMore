@@ -6,9 +6,14 @@ services:
   - postgresql: "9.6"
 
 before_script:
-  - psql -c 'create database travis_ci_test;' -U postgres
-  - psql -c "CREATE USER foo WITH PASSWORD 'postgres';" -U postgres
+  - psql -c 'create database addmoretest;' -U postgres
+  - psql -c "CREATE USER postgres WITH PASSWORD 'mat610';" -U postgres
 
 install: pip install -r requirements.txt
 
-script: pytest
+script:
+  - coverage run --source=resources,Model,app -m pytest 
+  - coverage report
+
+after-success:
+  - codeclimate-test-reporter
