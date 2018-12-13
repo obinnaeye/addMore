@@ -1,0 +1,21 @@
+language: python
+python:
+  - 3.6
+
+services:
+  - postgresql: "9.6"
+
+before_script:
+  - psql -c 'create database addmoretest;' -U postgres
+  - python migrateTest.py db init --directory travisMigrations 
+  - python migrateTest.py db migrate --directory travisMigrations 
+  - python migrateTest.py db upgrade --directory travisMigrations 
+
+install: pip install -r requirements.txt
+
+script:
+  - coverage run --source=resources,Model,app -m pytest 
+  - coverage report
+
+after-success:
+  - codeclimate-test-reporter --file .coverage

@@ -1,10 +1,73 @@
+body{
+  background-color: linen;
+}
+
 .container {
   width: 100%;
   height: 100%;
   margin: 0 auto;
   display: inline-flex;
-  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  background-color: aquamarine;
+}
+
+.form-input {
+  width: 500px;
+  padding: 2px;
+  margin-bottom: 3px
+}
+
+input, select, textarea {
+  height: 100px;
+  width: 100%;
+}
+
+select, input{
+  height: 50px;
+}
+
+small {
+  color: red;
+  display: none;
+}
+
+/* p {
+  background: red
+} */
+
+button {
+  margin-top: 30px;
+  width: 120px;
+  height: 50px;
+  border-radius: 5px
+}
+
+tr:nth-child(even) {
+  background-color: #eee;
+}
+tr:nth-child(odd) {
+ background-color: #fff;
+}
+th {
+  background-color: black;
+  color: white;
+  width: 300px;
+}
+th#title {
+  width: 100px
+}
+th#description {
+  width: 250px
+}
+th#client {
+  width: 70px
+}
+th#priority {
+  width: 100px
+}
+th#date {
+  width: 100px
+}
+th#area {
+  width: 100px
 }

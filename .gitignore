@@ -5,3 +5,7 @@ config.py
 .vscode
 __pycache__
 migrations
+htmlcov
+.coverage
+.coveragerc
+config.pyc
