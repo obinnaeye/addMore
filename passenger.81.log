@@ -1,0 +1,500 @@
+[ N 2018-12-15 14:20:30.5338 17714/T1 age/Wat/WatchdogMain.cpp:1366 ]: Starting Passenger watchdog...
+[ N 2018-12-15 14:20:30.5533 17717/T1 age/Cor/CoreMain.cpp:1339 ]: Starting Passenger core...
+[ N 2018-12-15 14:20:30.5535 17717/T1 age/Cor/CoreMain.cpp:256 ]: Passenger core running in multi-application mode.
+[ N 2018-12-15 14:20:30.5609 17717/T1 age/Cor/CoreMain.cpp:1014 ]: Passenger core online, PID 17717
+App 17753 output: Traceback (most recent call last):
+App 17753 output:   File "/usr/local/lib/python3.6/dist-packages/werkzeug/utils.py", line 418, in import_string
+App 17753 output:     __import__(import_name)
+App 17753 output: ModuleNotFoundError: No module named 'config'
+App 17753 output: 
+App 17753 output: During handling of the above exception, another exception occurred:
+App 17753 output: 
+App 17753 output: Traceback (most recent call last):
+App 17753 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 369, in <module>
+App 17753 output:     app_module = load_app()
+App 17753 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 76, in load_app
+App 17753 output:     return imp.load_source('passenger_wsgi', startup_file)
+App 17753 output:   File "/usr/lib/python3.6/imp.py", line 172, in load_source
+App 17753 output:     module = _load(spec)
+App 17753 output:   File "<frozen importlib._bootstrap>", line 684, in _load
+App 17753 output:   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+App 17753 output:   File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+App 17753 output:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+App 17753 output:   File "/var/www/aka/addMore/passenger_wsgi.py", line 2, in <module>
+App 17753 output:     application = create_app("config")
+App 17753 output:   File "/var/www/aka/addMore/app.py", line 5, in create_app
+App 17753 output:     app.config.from_object(config_filename)
+App 17753 output:   File "/usr/local/lib/python3.6/dist-packages/flask/config.py", line 168, in from_object
+App 17753 output:     obj = import_string(obj)
+App 17753 output:   File "/usr/local/lib/python3.6/dist-packages/werkzeug/utils.py", line 443, in import_string
+App 17753 output:     sys.exc_info()[2])
+App 17753 output:   File "/usr/local/lib/python3.6/dist-packages/werkzeug/_compat.py", line 137, in reraise
+App 17753 output:     raise value.with_traceback(tb)
+App 17753 output:   File "/usr/local/lib/python3.6/dist-packages/werkzeug/utils.py", line 418, in import_string
+App 17753 output:     __import__(import_name)
+App 17753 output: werkzeug.utils.ImportStringError: import_string() failed for 'config'. Possible reasons are:
+App 17753 output: 
+App 17753 output: - missing __init__.py in a package;
+App 17753 output: - package or module path not included in sys.path;
+App 17753 output: - duplicated package or module name taking precedence in sys.path;
+App 17753 output: - missing module, class, function or variable;
+App 17753 output: 
+App 17753 output: Debugged import:
+App 17753 output: 
+App 17753 output: - 'config' not found.
+App 17753 output: 
+App 17753 output: Original exception:
+App 17753 output: 
+App 17753 output: ModuleNotFoundError: No module named 'config'
+[ E 2018-12-15 14:20:33.0667 17717/Tf age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /var/www/aka/addMore: The application process exited prematurely.
+  Error ID: cdbc75ab
+  Error details saved to: /tmp/passenger-error-TWVuWM.html
+
+[ E 2018-12-15 14:20:33.0720 17717/T8 age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 1-1] Cannot checkout session because a spawning error occurred. The identifier of the error is cdbc75ab. Please see earlier logs for details about the error.
+[ N 2018-12-15 14:20:33.6848 17717/T6 age/Cor/SecurityUpdateChecker.h:519 ]: Security update check: no update found (next check in 24 hours)
+App 17896 output: Traceback (most recent call last):
+App 17896 output:   File "/usr/local/lib/python3.6/dist-packages/werkzeug/utils.py", line 418, in import_string
+App 17896 output:     __import__(import_name)
+App 17896 output: ModuleNotFoundError: No module named 'config'
+App 17896 output: 
+App 17896 output: During handling of the above exception, another exception occurred:
+App 17896 output: 
+App 17896 output: Traceback (most recent call last):
+App 17896 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 369, in <module>
+App 17896 output:     app_module = load_app()
+App 17896 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 76, in load_app
+App 17896 output:     return imp.load_source('passenger_wsgi', startup_file)
+App 17896 output:   File "/usr/lib/python3.6/imp.py", line 172, in load_source
+App 17896 output:     module = _load(spec)
+App 17896 output:   File "<frozen importlib._bootstrap>", line 684, in _load
+App 17896 output:   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+App 17896 output:   File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+App 17896 output:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+App 17896 output:   File "/var/www/aka/addMore/passenger_wsgi.py", line 2, in <module>
+App 17896 output:     application = create_app("config")
+App 17896 output:   File "/var/www/aka/addMore/app.py", line 5, in create_app
+App 17896 output:     app.config.from_object(config_filename)
+App 17896 output:   File "/usr/local/lib/python3.6/dist-packages/flask/config.py", line 168, in from_object
+App 17896 output:     obj = import_string(obj)
+App 17896 output:   File "/usr/local/lib/python3.6/dist-packages/werkzeug/utils.py", line 443, in import_string
+App 17896 output:     sys.exc_info()[2])
+App 17896 output:   File "/usr/local/lib/python3.6/dist-packages/werkzeug/_compat.py", line 137, in reraise
+App 17896 output:     raise value.with_traceback(tb)
+App 17896 output:   File "/usr/local/lib/python3.6/dist-packages/werkzeug/utils.py", line 418, in import_string
+App 17896 output:     __import__(import_name)
+App 17896 output: werkzeug.utils.ImportStringError: import_string() failed for 'config'. Possible reasons are:
+App 17896 output: 
+App 17896 output: - missing __init__.py in a package;
+App 17896 output: - package or module path not included in sys.path;
+App 17896 output: - duplicated package or module name taking precedence in sys.path;
+App 17896 output: - missing module, class, function or variable;
+App 17896 output: 
+App 17896 output: Debugged import:
+App 17896 output: 
+App 17896 output: - 'config' not found.
+App 17896 output: 
+App 17896 output: Original exception:
+App 17896 output: 
+App 17896 output: ModuleNotFoundError: No module named 'config'
+[ E 2018-12-15 14:20:37.5065 17717/Tk age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /var/www/aka/addMore: The application process exited prematurely.
+  Error ID: 8d85542c
+  Error details saved to: /tmp/passenger-error-vzVzp5.html
+
+[ E 2018-12-15 14:20:37.5188 17717/Ta age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 2-1] Cannot checkout session because a spawning error occurred. The identifier of the error is 8d85542c. Please see earlier logs for details about the error.
+App 17945 output: Traceback (most recent call last):
+App 17945 output:   File "/usr/local/lib/python3.6/dist-packages/werkzeug/utils.py", line 418, in import_string
+App 17945 output:     __import__(import_name)
+App 17945 output: ModuleNotFoundError: No module named 'config'
+App 17945 output: 
+App 17945 output: During handling of the above exception, another exception occurred:
+App 17945 output: 
+App 17945 output: Traceback (most recent call last):
+App 17945 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 369, in <module>
+App 17945 output:     app_module = load_app()
+App 17945 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 76, in load_app
+App 17945 output:     return imp.load_source('passenger_wsgi', startup_file)
+App 17945 output:   File "/usr/lib/python3.6/imp.py", line 172, in load_source
+App 17945 output:     module = _load(spec)
+App 17945 output:   File "<frozen importlib._bootstrap>", line 684, in _load
+App 17945 output:   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+App 17945 output:   File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+App 17945 output:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+App 17945 output:   File "/var/www/aka/addMore/passenger_wsgi.py", line 2, in <module>
+App 17945 output:     application = create_app("config")
+App 17945 output:   File "/var/www/aka/addMore/app.py", line 5, in create_app
+App 17945 output:     app.config.from_object(config_filename)
+App 17945 output:   File "/usr/local/lib/python3.6/dist-packages/flask/config.py", line 168, in from_object
+App 17945 output:     obj = import_string(obj)
+App 17945 output:   File "/usr/local/lib/python3.6/dist-packages/werkzeug/utils.py", line 443, in import_string
+App 17945 output:     sys.exc_info()[2])
+App 17945 output:   File "/usr/local/lib/python3.6/dist-packages/werkzeug/_compat.py", line 137, in reraise
+App 17945 output:     raise value.with_traceback(tb)
+App 17945 output:   File "/usr/local/lib/python3.6/dist-packages/werkzeug/utils.py", line 418, in import_string
+App 17945 output:     __import__(import_name)
+App 17945 output: werkzeug.utils.ImportStringError: import_string() failed for 'config'. Possible reasons are:
+App 17945 output: 
+App 17945 output: - missing __init__.py in a package;
+App 17945 output: - package or module path not included in sys.path;
+App 17945 output: - duplicated package or module name taking precedence in sys.path;
+App 17945 output: - missing module, class, function or variable;
+App 17945 output: 
+App 17945 output: Debugged import:
+App 17945 output: 
+App 17945 output: - 'config' not found.
+App 17945 output: 
+App 17945 output: Original exception:
+App 17945 output: 
+App 17945 output: ModuleNotFoundError: No module named 'config'
+[ E 2018-12-15 14:20:38.1426 17717/Tp age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /var/www/aka/addMore: The application process exited prematurely.
+  Error ID: eb41784e
+  Error details saved to: /tmp/passenger-error-WoRoXr.html
+
+[ E 2018-12-15 14:20:38.1479 17717/T8 age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 1-2] Cannot checkout session because a spawning error occurred. The identifier of the error is eb41784e. Please see earlier logs for details about the error.
+App 17990 output: Traceback (most recent call last):
+App 17990 output:   File "/usr/local/lib/python3.6/dist-packages/werkzeug/utils.py", line 418, in import_string
+App 17990 output:     __import__(import_name)
+App 17990 output: ModuleNotFoundError: No module named 'config'
+App 17990 output: 
+App 17990 output: During handling of the above exception, another exception occurred:
+App 17990 output: 
+App 17990 output: Traceback (most recent call last):
+App 17990 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 369, in <module>
+App 17990 output:     app_module = load_app()
+App 17990 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 76, in load_app
+App 17990 output:     return imp.load_source('passenger_wsgi', startup_file)
+App 17990 output:   File "/usr/lib/python3.6/imp.py", line 172, in load_source
+App 17990 output:     module = _load(spec)
+App 17990 output:   File "<frozen importlib._bootstrap>", line 684, in _load
+App 17990 output:   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+App 17990 output:   File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+App 17990 output:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+App 17990 output:   File "/var/www/aka/addMore/passenger_wsgi.py", line 2, in <module>
+App 17990 output:     application = create_app("config")
+App 17990 output:   File "/var/www/aka/addMore/app.py", line 5, in create_app
+App 17990 output:     app.config.from_object(config_filename)
+App 17990 output:   File "/usr/local/lib/python3.6/dist-packages/flask/config.py", line 168, in from_object
+App 17990 output:     obj = import_string(obj)
+App 17990 output:   File "/usr/local/lib/python3.6/dist-packages/werkzeug/utils.py", line 443, in import_string
+App 17990 output:     sys.exc_info()[2])
+App 17990 output:   File "/usr/local/lib/python3.6/dist-packages/werkzeug/_compat.py", line 137, in reraise
+App 17990 output:     raise value.with_traceback(tb)
+App 17990 output:   File "/usr/local/lib/python3.6/dist-packages/werkzeug/utils.py", line 418, in import_string
+App 17990 output:     __import__(import_name)
+App 17990 output: werkzeug.utils.ImportStringError: import_string() failed for 'config'. Possible reasons are:
+App 17990 output: 
+App 17990 output: - missing __init__.py in a package;
+App 17990 output: - package or module path not included in sys.path;
+App 17990 output: - duplicated package or module name taking precedence in sys.path;
+App 17990 output: - missing module, class, function or variable;
+App 17990 output: 
+App 17990 output: Debugged import:
+App 17990 output: 
+App 17990 output: - 'config' not found.
+App 17990 output: 
+App 17990 output: Original exception:
+App 17990 output: 
+App 17990 output: ModuleNotFoundError: No module named 'config'
+App 17990 output: 
+[ E 2018-12-15 14:20:51.7948 17717/Tu age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /var/www/aka/addMore: The application process exited prematurely.
+  Error ID: 3ed3182a
+  Error details saved to: /tmp/passenger-error-TsCcs7.html
+
+[ E 2018-12-15 14:20:51.7998 17717/Ta age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 2-2] Cannot checkout session because a spawning error occurred. The identifier of the error is 3ed3182a. Please see earlier logs for details about the error.
+
+[ N 2018-12-15 14:22:03.7034 17717/T8 age/Cor/CoreMain.cpp:671 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2018-12-15 14:22:03.7048 17717/T1 age/Cor/CoreMain.cpp:1245 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2018-12-15 14:22:03.7049 17717/Ta Ser/Server.h:902 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2018-12-15 14:22:03.7049 17717/Ta Ser/Server.h:558 ]: [ServerThr.2] Shutdown finished
+[ N 2018-12-15 14:22:03.7049 17717/T8 Ser/Server.h:902 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2018-12-15 14:22:03.7049 17717/T8 Ser/Server.h:558 ]: [ServerThr.1] Shutdown finished
+[ N 2018-12-15 14:22:03.7051 17717/Tc Ser/Server.h:902 ]: [ApiServer] Freed 0 spare client objects
+[ N 2018-12-15 14:22:03.7052 17717/Tc Ser/Server.h:558 ]: [ApiServer] Shutdown finished
+[ N 2018-12-15 14:22:04.5915 17717/T1 age/Cor/CoreMain.cpp:1324 ]: Passenger core shutdown finished
+[ N 2018-12-15 14:22:05.9325 18089/T1 age/Wat/WatchdogMain.cpp:1366 ]: Starting Passenger watchdog...
+[ N 2018-12-15 14:22:05.9520 18092/T1 age/Cor/CoreMain.cpp:1339 ]: Starting Passenger core...
+[ N 2018-12-15 14:22:05.9521 18092/T1 age/Cor/CoreMain.cpp:256 ]: Passenger core running in multi-application mode.
+[ N 2018-12-15 14:22:05.9590 18092/T1 age/Cor/CoreMain.cpp:1014 ]: Passenger core online, PID 18092
+App 18128 output: Traceback (most recent call last):
+App 18128 output:   File "/usr/local/lib/python3.6/dist-packages/werkzeug/utils.py", line 418, in import_string
+App 18128 output:     __import__(import_name)
+App 18128 output: ModuleNotFoundError: No module named 'config'
+App 18128 output: 
+App 18128 output: During handling of the above exception, another exception occurred:
+App 18128 output: 
+App 18128 output: Traceback (most recent call last):
+App 18128 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 369, in <module>
+App 18128 output:     app_module = load_app()
+App 18128 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 76, in load_app
+App 18128 output:     return imp.load_source('passenger_wsgi', startup_file)
+App 18128 output:   File "/usr/lib/python3.6/imp.py", line 172, in load_source
+App 18128 output:     module = _load(spec)
+App 18128 output:   File "<frozen importlib._bootstrap>", line 684, in _load
+App 18128 output:   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+App 18128 output:   File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+App 18128 output:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+App 18128 output:   File "/var/www/aka/addMore/passenger_wsgi.py", line 2, in <module>
+App 18128 output:     application = create_app("config")
+App 18128 output:   File "/var/www/aka/addMore/app.py", line 5, in create_app
+App 18128 output:     app.config.from_object(config_filename)
+App 18128 output:   File "/usr/local/lib/python3.6/dist-packages/flask/config.py", line 168, in from_object
+App 18128 output:     obj = import_string(obj)
+App 18128 output:   File "/usr/local/lib/python3.6/dist-packages/werkzeug/utils.py", line 443, in import_string
+App 18128 output:     sys.exc_info()[2])
+App 18128 output:   File "/usr/local/lib/python3.6/dist-packages/werkzeug/_compat.py", line 137, in reraise
+App 18128 output:     raise value.with_traceback(tb)
+App 18128 output:   File "/usr/local/lib/python3.6/dist-packages/werkzeug/utils.py", line 418, in import_string
+App 18128 output:     __import__(import_name)
+App 18128 output: werkzeug.utils.ImportStringError: import_string() failed for 'config'. Possible reasons are:
+App 18128 output: 
+App 18128 output: - missing __init__.py in a package;
+App 18128 output: - package or module path not included in sys.path;
+App 18128 output: - duplicated package or module name taking precedence in sys.path;
+App 18128 output: - missing module, class, function or variable;
+App 18128 output: 
+App 18128 output: Debugged import:
+App 18128 output: 
+App 18128 output: - 'config' not found.
+App 18128 output: 
+App 18128 output: Original exception:
+App 18128 output: 
+App 18128 output: ModuleNotFoundError: No module named 'config'
+[ N 2018-12-15 14:22:08.5941 18092/T6 age/Cor/SecurityUpdateChecker.h:519 ]: Security update check: no update found (next check in 24 hours)
+[ E 2018-12-15 14:22:08.6598 18092/Tf age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /var/www/aka/addMore: The application process exited prematurely.
+  Error ID: 85cd25f9
+  Error details saved to: /tmp/passenger-error-bb8Org.html
+
+[ E 2018-12-15 14:22:08.6680 18092/T7 age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 1-1] Cannot checkout session because a spawning error occurred. The identifier of the error is 85cd25f9. Please see earlier logs for details about the error.
+App 18167 output: Traceback (most recent call last):
+App 18167 output:   File "/usr/local/lib/python3.6/dist-packages/werkzeug/utils.py", line 418, in import_string
+App 18167 output:     __import__(import_name)
+App 18167 output: ModuleNotFoundError: No module named 'config'
+App 18167 output: 
+App 18167 output: During handling of the above exception, another exception occurred:
+App 18167 output: 
+App 18167 output: Traceback (most recent call last):
+App 18167 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 369, in <module>
+App 18167 output:     app_module = load_app()
+App 18167 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 76, in load_app
+App 18167 output:     return imp.load_source('passenger_wsgi', startup_file)
+App 18167 output:   File "/usr/lib/python3.6/imp.py", line 172, in load_source
+App 18167 output:     module = _load(spec)
+App 18167 output:   File "<frozen importlib._bootstrap>", line 684, in _load
+App 18167 output:   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+App 18167 output:   File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+App 18167 output:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+App 18167 output:   File "/var/www/aka/addMore/passenger_wsgi.py", line 2, in <module>
+App 18167 output:     application = create_app("config")
+App 18167 output:   File "/var/www/aka/addMore/app.py", line 5, in create_app
+App 18167 output:     app.config.from_object(config_filename)
+App 18167 output:   File "/usr/local/lib/python3.6/dist-packages/flask/config.py", line 168, in from_object
+App 18167 output:     obj = import_string(obj)
+App 18167 output:   File "/usr/local/lib/python3.6/dist-packages/werkzeug/utils.py", line 443, in import_string
+App 18167 output:     sys.exc_info()[2])
+App 18167 output:   File "/usr/local/lib/python3.6/dist-packages/werkzeug/_compat.py", line 137, in reraise
+App 18167 output:     raise value.with_traceback(tb)
+App 18167 output:   File "/usr/local/lib/python3.6/dist-packages/werkzeug/utils.py", line 418, in import_string
+App 18167 output:     __import__(import_name)
+App 18167 output: werkzeug.utils.ImportStringError: import_string() failed for 'config'. Possible reasons are:
+App 18167 output: 
+App 18167 output: - missing __init__.py in a package;
+App 18167 output: - package or module path not included in sys.path;
+App 18167 output: - duplicated package or module name taking precedence in sys.path;
+App 18167 output: - missing module, class, function or variable;
+App 18167 output: 
+App 18167 output: Debugged import:
+App 18167 output: 
+App 18167 output: - 'config' not found.
+App 18167 output: 
+App 18167 output: Original exception:
+App 18167 output: 
+App 18167 output: ModuleNotFoundError: No module named 'config'
+[ E 2018-12-15 14:22:10.8606 18092/Tk age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /var/www/aka/addMore: The application process exited prematurely.
+  Error ID: 90a68db5
+  Error details saved to: /tmp/passenger-error-yyKlVq.html
+
+[ E 2018-12-15 14:22:10.8721 18092/Ta age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 2-1] Cannot checkout session because a spawning error occurred. The identifier of the error is 90a68db5. Please see earlier logs for details about the error.
+App 18210 output: Traceback (most recent call last):
+App 18210 output:   File "/usr/local/lib/python3.6/dist-packages/werkzeug/utils.py", line 418, in import_string
+App 18210 output:     __import__(import_name)
+App 18210 output: ModuleNotFoundError: No module named 'config'
+App 18210 output: 
+App 18210 output: During handling of the above exception, another exception occurred:
+App 18210 output: 
+App 18210 output: Traceback (most recent call last):
+App 18210 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 369, in <module>
+App 18210 output:     app_module = load_app()
+App 18210 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 76, in load_app
+App 18210 output:     return imp.load_source('passenger_wsgi', startup_file)
+App 18210 output:   File "/usr/lib/python3.6/imp.py", line 172, in load_source
+App 18210 output:     module = _load(spec)
+App 18210 output:   File "<frozen importlib._bootstrap>", line 684, in _load
+App 18210 output:   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+App 18210 output:   File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+App 18210 output:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+App 18210 output:   File "/var/www/aka/addMore/passenger_wsgi.py", line 2, in <module>
+App 18210 output:     application = create_app("config")
+App 18210 output:   File "/var/www/aka/addMore/app.py", line 5, in create_app
+App 18210 output:     app.config.from_object(config_filename)
+App 18210 output:   File "/usr/local/lib/python3.6/dist-packages/flask/config.py", line 168, in from_object
+App 18210 output:     obj = import_string(obj)
+App 18210 output:   File "/usr/local/lib/python3.6/dist-packages/werkzeug/utils.py", line 443, in import_string
+App 18210 output:     sys.exc_info()[2])
+App 18210 output:   File "/usr/local/lib/python3.6/dist-packages/werkzeug/_compat.py", line 137, in reraise
+App 18210 output:     raise value.with_traceback(tb)
+App 18210 output:   File "/usr/local/lib/python3.6/dist-packages/werkzeug/utils.py", line 418, in import_string
+App 18210 output:     __import__(import_name)
+App 18210 output: werkzeug.utils.ImportStringError: import_string() failed for 'config'. Possible reasons are:
+App 18210 output: 
+App 18210 output: - missing __init__.py in a package;
+App 18210 output: - package or module path not included in sys.path;
+App 18210 output: - duplicated package or module name taking precedence in sys.path;
+App 18210 output: - missing module, class, function or variable;
+App 18210 output: 
+App 18210 output: Debugged import:
+App 18210 output: 
+App 18210 output: - 'config' not found.
+App 18210 output: 
+App 18210 output: Original exception:
+App 18210 output: 
+App 18210 output: ModuleNotFoundError: No module named 'config'
+App 18210 output: 
+[ E 2018-12-15 14:22:12.8185 18092/Tp age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /var/www/aka/addMore: The application process exited prematurely.
+  Error ID: b6eb55f1
+  Error details saved to: /tmp/passenger-error-3RNhEM.html
+
+[ E 2018-12-15 14:22:12.8352 18092/T7 age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 1-2] Cannot checkout session because a spawning error occurred. The identifier of the error is b6eb55f1. Please see earlier logs for details about the error.
+App 18252 output: Traceback (most recent call last):
+App 18252 output:   File "/usr/local/lib/python3.6/dist-packages/werkzeug/utils.py", line 418, in import_string
+App 18252 output:     __import__(import_name)
+App 18252 output: ModuleNotFoundError: No module named 'config'
+App 18252 output: 
+App 18252 output: During handling of the above exception, another exception occurred:
+App 18252 output: 
+App 18252 output: Traceback (most recent call last):
+App 18252 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 369, in <module>
+App 18252 output:     app_module = load_app()
+App 18252 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 76, in load_app
+App 18252 output:     return imp.load_source('passenger_wsgi', startup_file)
+App 18252 output:   File "/usr/lib/python3.6/imp.py", line 172, in load_source
+App 18252 output:     module = _load(spec)
+App 18252 output:   File "<frozen importlib._bootstrap>", line 684, in _load
+App 18252 output:   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+App 18252 output:   File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+App 18252 output:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+App 18252 output:   File "/var/www/aka/addMore/passenger_wsgi.py", line 2, in <module>
+App 18252 output:     application = create_app("config")
+App 18252 output:   File "/var/www/aka/addMore/app.py", line 5, in create_app
+App 18252 output:     app.config.from_object(config_filename)
+App 18252 output:   File "/usr/local/lib/python3.6/dist-packages/flask/config.py", line 168, in from_object
+App 18252 output:     obj = import_string(obj)
+App 18252 output:   File "/usr/local/lib/python3.6/dist-packages/werkzeug/utils.py", line 443, in import_string
+App 18252 output:     sys.exc_info()[2])
+App 18252 output:   File "/usr/local/lib/python3.6/dist-packages/werkzeug/_compat.py", line 137, in reraise
+App 18252 output:     raise value.with_traceback(tb)
+App 18252 output:   File "/usr/local/lib/python3.6/dist-packages/werkzeug/utils.py", line 418, in import_string
+App 18252 output:     __import__(import_name)
+App 18252 output: werkzeug.utils.ImportStringError: import_string() failed for 'config'. Possible reasons are:
+App 18252 output: 
+App 18252 output: - missing __init__.py in a package;
+App 18252 output: - package or module path not included in sys.path;
+App 18252 output: - duplicated package or module name taking precedence in sys.path;
+App 18252 output: - missing module, class, function or variable;
+App 18252 output: 
+App 18252 output: Debugged import:
+App 18252 output: 
+App 18252 output: - 'config' not found.
+App 18252 output: 
+App 18252 output: Original exception:
+App 18252 output: 
+App 18252 output: ModuleNotFoundError: No module named 'config'
+App 18252 output: 
+[ E 2018-12-15 14:22:14.9210 18092/Tu age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /var/www/aka/addMore: The application process exited prematurely.
+  Error ID: 66b589b8
+  Error details saved to: /tmp/passenger-error-xjxdBl.html
+
+[ E 2018-12-15 14:22:14.9264 18092/Ta age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 2-2] Cannot checkout session because a spawning error occurred. The identifier of the error is 66b589b8. Please see earlier logs for details about the error.
+[ N 2018-12-15 14:38:14.4067 18092/T4 age/Cor/CoreMain.cpp:1146 ]: Checking whether to disconnect long-running connections for process 18736, application /var/www/aka/addMore (development)
+App 18771 output: [ pid=18771, time=2018-12-15 14:46:17,452 ]: /usr/local/lib/python3.6/dist-packages/psycopg2/__init__.py:144: UserWarning: The psycopg2 wheel package will be renamed from release 2.8; in order to keep installing from binary please use "pip install psycopg2-binary" instead. For details see: <http://initd.org/psycopg/docs/install.html#binary-install-from-pypi>.
+App 18771 output:   """)
+App 18771 output: 
+
+[ N 2018-12-15 14:50:20.1380 18092/T7 age/Cor/CoreMain.cpp:671 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2018-12-15 14:50:20.1381 18092/T1 age/Cor/CoreMain.cpp:1245 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2018-12-15 14:50:20.1382 18092/T1 age/Cor/CoreMain.cpp:1146 ]: Checking whether to disconnect long-running connections for process 18771, application /var/www/aka/addMore (development)
+[ N 2018-12-15 14:50:20.1384 18092/Ta Ser/Server.h:902 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2018-12-15 14:50:20.1384 18092/T7 Ser/Server.h:902 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2018-12-15 14:50:20.1385 18092/Ta Ser/Server.h:558 ]: [ServerThr.2] Shutdown finished
+[ N 2018-12-15 14:50:20.1385 18092/T7 Ser/Server.h:558 ]: [ServerThr.1] Shutdown finished
+[ N 2018-12-15 14:50:20.1387 18092/Tc Ser/Server.h:902 ]: [ApiServer] Freed 0 spare client objects
+[ N 2018-12-15 14:50:20.1387 18092/Tc Ser/Server.h:558 ]: [ApiServer] Shutdown finished
+[ N 2018-12-15 14:50:20.1390 18092/T1 age/Cor/CoreMain.cpp:1146 ]: Checking whether to disconnect long-running connections for process 18771, application /var/www/aka/addMore (development)
+[ N 2018-12-15 14:50:21.0191 18092/T1 age/Cor/CoreMain.cpp:1324 ]: Passenger core shutdown finished
+[ N 2018-12-15 14:50:23.6411 19933/T1 age/Wat/WatchdogMain.cpp:1366 ]: Starting Passenger watchdog...
+[ N 2018-12-15 14:50:23.6617 19936/T1 age/Cor/CoreMain.cpp:1339 ]: Starting Passenger core...
+[ N 2018-12-15 14:50:23.6618 19936/T1 age/Cor/CoreMain.cpp:256 ]: Passenger core running in multi-application mode.
+[ N 2018-12-15 14:50:23.6698 19936/T1 age/Cor/CoreMain.cpp:1014 ]: Passenger core online, PID 19936
+[ N 2018-12-15 14:50:26.3373 19936/T5 age/Cor/SecurityUpdateChecker.h:519 ]: Security update check: no update found (next check in 24 hours)
+App 19971 output: [ pid=19971, time=2018-12-15 14:51:10,330 ]: /usr/local/lib/python3.6/dist-packages/psycopg2/__init__.py:144: UserWarning: The psycopg2 wheel package will be renamed from release 2.8; in order to keep installing from binary please use "pip install psycopg2-binary" instead. For details see: <http://initd.org/psycopg/docs/install.html#binary-install-from-pypi>.
+App 19971 output:   """)
+App 19971 output: 
+
+[ N 2018-12-15 14:52:30.0504 19936/T9 age/Cor/CoreMain.cpp:671 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2018-12-15 14:52:30.0505 19936/T1 age/Cor/CoreMain.cpp:1245 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2018-12-15 14:52:30.0505 19936/T1 age/Cor/CoreMain.cpp:1146 ]: Checking whether to disconnect long-running connections for process 19971, application /var/www/aka/addMore (development)
+[ N 2018-12-15 14:52:30.0506 19936/T9 Ser/Server.h:902 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2018-12-15 14:52:30.0506 19936/Tb Ser/Server.h:902 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2018-12-15 14:52:30.0506 19936/T9 Ser/Server.h:558 ]: [ServerThr.1] Shutdown finished
+[ N 2018-12-15 14:52:30.0507 19936/Tb Ser/Server.h:558 ]: [ServerThr.2] Shutdown finished
+[ N 2018-12-15 14:52:30.0507 19936/Td Ser/Server.h:902 ]: [ApiServer] Freed 0 spare client objects
+[ N 2018-12-15 14:52:30.0508 19936/Td Ser/Server.h:558 ]: [ApiServer] Shutdown finished
+[ N 2018-12-15 14:52:30.0522 19936/T1 age/Cor/CoreMain.cpp:1146 ]: Checking whether to disconnect long-running connections for process 19971, application /var/www/aka/addMore (development)
+[ N 2018-12-15 14:52:30.8128 19936/T1 age/Cor/CoreMain.cpp:1324 ]: Passenger core shutdown finished
+[ N 2018-12-15 14:52:32.0700 20256/T1 age/Wat/WatchdogMain.cpp:1366 ]: Starting Passenger watchdog...
+[ N 2018-12-15 14:52:32.0913 20259/T1 age/Cor/CoreMain.cpp:1339 ]: Starting Passenger core...
+[ N 2018-12-15 14:52:32.0915 20259/T1 age/Cor/CoreMain.cpp:256 ]: Passenger core running in multi-application mode.
+[ N 2018-12-15 14:52:32.0986 20259/T1 age/Cor/CoreMain.cpp:1014 ]: Passenger core online, PID 20259
+[ N 2018-12-15 14:52:34.7097 20259/T6 age/Cor/SecurityUpdateChecker.h:519 ]: Security update check: no update found (next check in 24 hours)
+App 20294 output: [ pid=20294, time=2018-12-15 14:54:13,519 ]: /usr/local/lib/python3.6/dist-packages/psycopg2/__init__.py:144: UserWarning: The psycopg2 wheel package will be renamed from release 2.8; in order to keep installing from binary please use "pip install psycopg2-binary" instead. For details see: <http://initd.org/psycopg/docs/install.html#binary-install-from-pypi>.
+App 20294 output:   """)
+App 20294 output: 
+
+[ N 2018-12-15 15:00:55.4278 20259/T9 age/Cor/CoreMain.cpp:671 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2018-12-15 15:00:55.4279 20259/T1 age/Cor/CoreMain.cpp:1245 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2018-12-15 15:00:55.4279 20259/T1 age/Cor/CoreMain.cpp:1146 ]: Checking whether to disconnect long-running connections for process 20294, application /var/www/aka/addMore (development)
+[ N 2018-12-15 15:00:55.4284 20259/Tb Ser/Server.h:902 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2018-12-15 15:00:55.4285 20259/Tb Ser/Server.h:558 ]: [ServerThr.2] Shutdown finished
+[ N 2018-12-15 15:00:55.4286 20259/Td Ser/Server.h:902 ]: [ApiServer] Freed 0 spare client objects
+[ N 2018-12-15 15:00:55.4286 20259/Td Ser/Server.h:558 ]: [ApiServer] Shutdown finished
+[ N 2018-12-15 15:00:55.4286 20259/T9 Ser/Server.h:902 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2018-12-15 15:00:55.4287 20259/T9 Ser/Server.h:558 ]: [ServerThr.1] Shutdown finished
+[ N 2018-12-15 15:00:55.4299 20259/T1 age/Cor/CoreMain.cpp:1146 ]: Checking whether to disconnect long-running connections for process 20294, application /var/www/aka/addMore (development)
+[ N 2018-12-15 15:00:56.3406 20259/T1 age/Cor/CoreMain.cpp:1324 ]: Passenger core shutdown finished
+[ N 2018-12-15 15:02:17.0311 21018/T1 age/Wat/WatchdogMain.cpp:1366 ]: Starting Passenger watchdog...
+[ N 2018-12-15 15:02:17.0546 21021/T1 age/Cor/CoreMain.cpp:1339 ]: Starting Passenger core...
+[ N 2018-12-15 15:02:17.0547 21021/T1 age/Cor/CoreMain.cpp:256 ]: Passenger core running in multi-application mode.
+[ N 2018-12-15 15:02:17.0618 21021/T1 age/Cor/CoreMain.cpp:1014 ]: Passenger core online, PID 21021
+[ N 2018-12-15 15:02:19.7277 21021/T6 age/Cor/SecurityUpdateChecker.h:519 ]: Security update check: no update found (next check in 24 hours)
+App 21057 output: [ pid=21057, time=2018-12-15 15:03:51,451 ]: /usr/local/lib/python3.6/dist-packages/psycopg2/__init__.py:144: UserWarning: The psycopg2 wheel package will be renamed from release 2.8; in order to keep installing from binary please use "pip install psycopg2-binary" instead. For details see: <http://initd.org/psycopg/docs/install.html#binary-install-from-pypi>.
+App 21057 output:   """)
+App 21057 output: 
+
+[ N 2018-12-15 15:20:39.8481 21021/T9 age/Cor/CoreMain.cpp:671 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2018-12-15 15:20:39.8482 21021/T1 age/Cor/CoreMain.cpp:1245 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2018-12-15 15:20:39.8482 21021/T1 age/Cor/CoreMain.cpp:1146 ]: Checking whether to disconnect long-running connections for process 21057, application /var/www/aka/addMore (development)
+[ N 2018-12-15 15:20:39.8484 21021/Tb Ser/Server.h:902 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2018-12-15 15:20:39.8484 21021/Tb Ser/Server.h:558 ]: [ServerThr.2] Shutdown finished
+[ N 2018-12-15 15:20:39.8484 21021/T9 Ser/Server.h:902 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2018-12-15 15:20:39.8484 21021/T9 Ser/Server.h:558 ]: [ServerThr.1] Shutdown finished
+[ N 2018-12-15 15:20:39.8486 21021/Td Ser/Server.h:902 ]: [ApiServer] Freed 0 spare client objects
+[ N 2018-12-15 15:20:39.8486 21021/Td Ser/Server.h:558 ]: [ApiServer] Shutdown finished
+[ N 2018-12-15 15:20:39.8489 21021/T1 age/Cor/CoreMain.cpp:1146 ]: Checking whether to disconnect long-running connections for process 21057, application /var/www/aka/addMore (development)
+[ N 2018-12-15 15:20:40.5697 21021/T1 age/Cor/CoreMain.cpp:1324 ]: Passenger core shutdown finished
+[ N 2018-12-16 13:03:26.4681 5787/T1 age/Wat/WatchdogMain.cpp:1366 ]: Starting Passenger watchdog...
+[ N 2018-12-16 13:03:26.4929 5790/T1 age/Cor/CoreMain.cpp:1339 ]: Starting Passenger core...
+[ N 2018-12-16 13:03:26.4932 5790/T1 age/Cor/CoreMain.cpp:256 ]: Passenger core running in multi-application mode.
+[ N 2018-12-16 13:03:26.5010 5790/T1 age/Cor/CoreMain.cpp:1014 ]: Passenger core online, PID 5790
+[ N 2018-12-16 13:03:29.7422 5790/T5 age/Cor/SecurityUpdateChecker.h:519 ]: Security update check: no update found (next check in 24 hours)
+App 5826 output: [ pid=5826, time=2018-12-16 13:07:13,177 ]: /usr/local/lib/python3.6/dist-packages/psycopg2/__init__.py:144: UserWarning: The psycopg2 wheel package will be renamed from release 2.8; in order to keep installing from binary please use "pip install psycopg2-binary" instead. For details see: <http://initd.org/psycopg/docs/install.html#binary-install-from-pypi>.
+App 5826 output:   """)
+App 5826 output: 
+[ N 2018-12-16 13:08:35.8013 5790/T4 age/Cor/CoreMain.cpp:1146 ]: Checking whether to disconnect long-running connections for process 5985, application /var/www/aka/addMore (development)

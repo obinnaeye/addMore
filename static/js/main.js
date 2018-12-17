@@ -32,9 +32,10 @@ $(document).ready(function(){
     if (!title || !description || !client || !target_date) {
       error_display(title, description, client_priority, target_date)
     } else {
+      const origin   = window.location.origin;
       $.ajax({
         type: 'POST',
-        url: "http://127.0.0.1:5000/feature-request",
+        url: origin + "/feature-request",
         contentType: "application/json; charset=utf-8",
         data: JSON.stringify({
           Title: title, 
