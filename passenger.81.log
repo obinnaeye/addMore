@@ -498,3 +498,45 @@ App 5826 output: [ pid=5826, time=2018-12-16 13:07:13,177 ]: /usr/local/lib/pyth
 App 5826 output:   """)
 App 5826 output: 
 [ N 2018-12-16 13:08:35.8013 5790/T4 age/Cor/CoreMain.cpp:1146 ]: Checking whether to disconnect long-running connections for process 5985, application /var/www/aka/addMore (development)
+[ N 2018-12-17 05:11:28.6275 5790/T4 age/Cor/CoreMain.cpp:1146 ]: Checking whether to disconnect long-running connections for process 23927, application /var/www/aka/addMore (development)
+[ N 2018-12-17 05:21:08.1267 5790/T4 age/Cor/CoreMain.cpp:1146 ]: Checking whether to disconnect long-running connections for process 24871, application /var/www/aka/addMore (development)
+
+[ N 2018-12-17 05:35:48.9140 5790/T8 age/Cor/CoreMain.cpp:671 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2018-12-17 05:35:48.9141 5790/T1 age/Cor/CoreMain.cpp:1245 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2018-12-17 05:35:48.9142 5790/T1 age/Cor/CoreMain.cpp:1146 ]: Checking whether to disconnect long-running connections for process 5826, application /var/www/aka/addMore (development)
+[ N 2018-12-17 05:35:48.9143 5790/T1 age/Cor/CoreMain.cpp:1146 ]: Checking whether to disconnect long-running connections for process 26196, application /var/www/aka/addMore (development)
+[ N 2018-12-17 05:35:48.9144 5790/Tb Ser/Server.h:902 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2018-12-17 05:35:48.9144 5790/Tb Ser/Server.h:558 ]: [ServerThr.2] Shutdown finished
+[ N 2018-12-17 05:35:48.9146 5790/T8 Ser/Server.h:902 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2018-12-17 05:35:48.9146 5790/T8 Ser/Server.h:558 ]: [ServerThr.1] Shutdown finished
+[ N 2018-12-17 05:35:48.9153 5790/Tc Ser/Server.h:902 ]: [ApiServer] Freed 0 spare client objects
+[ N 2018-12-17 05:35:48.9154 5790/Tc Ser/Server.h:558 ]: [ApiServer] Shutdown finished
+[ N 2018-12-17 05:35:48.9215 5790/T1 age/Cor/CoreMain.cpp:1146 ]: Checking whether to disconnect long-running connections for process 5826, application /var/www/aka/addMore (development)
+[ N 2018-12-17 05:35:48.9218 5790/T1 age/Cor/CoreMain.cpp:1146 ]: Checking whether to disconnect long-running connections for process 26196, application /var/www/aka/addMore (development)
+[ N 2018-12-17 05:35:50.0188 5790/T1 age/Cor/CoreMain.cpp:1324 ]: Passenger core shutdown finished
+[ N 2018-12-17 05:35:54.3400 26408/T1 age/Wat/WatchdogMain.cpp:1366 ]: Starting Passenger watchdog...
+[ N 2018-12-17 05:35:54.3664 26411/T1 age/Cor/CoreMain.cpp:1339 ]: Starting Passenger core...
+[ N 2018-12-17 05:35:54.3667 26411/T1 age/Cor/CoreMain.cpp:256 ]: Passenger core running in multi-application mode.
+[ N 2018-12-17 05:35:54.3810 26411/T1 age/Cor/CoreMain.cpp:1014 ]: Passenger core online, PID 26411
+[ N 2018-12-17 05:35:57.0491 26411/T5 age/Cor/SecurityUpdateChecker.h:519 ]: Security update check: no update found (next check in 24 hours)
+
+[ N 2018-12-17 05:37:22.0021 26411/T9 age/Cor/CoreMain.cpp:671 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2018-12-17 05:37:22.0023 26411/T1 age/Cor/CoreMain.cpp:1245 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2018-12-17 05:37:22.0023 26411/T1 age/Cor/CoreMain.cpp:1146 ]: Checking whether to disconnect long-running connections for process 26447, application /var/www/aka/addMore (development)
+[ N 2018-12-17 05:37:22.0025 26411/Tb Ser/Server.h:902 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2018-12-17 05:37:22.0025 26411/Tb Ser/Server.h:558 ]: [ServerThr.2] Shutdown finished
+[ N 2018-12-17 05:37:22.0026 26411/T9 Ser/Server.h:902 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2018-12-17 05:37:22.0026 26411/T9 Ser/Server.h:558 ]: [ServerThr.1] Shutdown finished
+[ N 2018-12-17 05:37:22.0027 26411/Td Ser/Server.h:902 ]: [ApiServer] Freed 0 spare client objects
+[ N 2018-12-17 05:37:22.0027 26411/Td Ser/Server.h:558 ]: [ApiServer] Shutdown finished
+[ N 2018-12-17 05:37:22.0090 26411/T1 age/Cor/CoreMain.cpp:1146 ]: Checking whether to disconnect long-running connections for process 26447, application /var/www/aka/addMore (development)
+[ N 2018-12-17 05:37:22.7742 26411/T1 age/Cor/CoreMain.cpp:1324 ]: Passenger core shutdown finished
+[ N 2018-12-17 05:37:48.9014 26897/T1 age/Wat/WatchdogMain.cpp:1366 ]: Starting Passenger watchdog...
+[ N 2018-12-17 05:37:48.9220 26900/T1 age/Cor/CoreMain.cpp:1339 ]: Starting Passenger core...
+[ N 2018-12-17 05:37:48.9224 26900/T1 age/Cor/CoreMain.cpp:256 ]: Passenger core running in multi-application mode.
+[ N 2018-12-17 05:37:48.9303 26900/T1 age/Cor/CoreMain.cpp:1014 ]: Passenger core online, PID 26900
+[ N 2018-12-17 05:37:51.5657 26900/T5 age/Cor/SecurityUpdateChecker.h:519 ]: Security update check: no update found (next check in 24 hours)
+App 26937 output: [ pid=26937, time=2018-12-17 05:38:43,705 ]: /usr/local/lib/python3.6/dist-packages/psycopg2/__init__.py:144: UserWarning: The psycopg2 wheel package will be renamed from release 2.8; in order to keep installing from binary please use "pip install psycopg2-binary" instead. For details see: <http://initd.org/psycopg/docs/install.html#binary-install-from-pypi>.
+App 26937 output:   """)
+App 26937 output: 
+[ N 2018-12-17 05:43:10.6270 26900/T4 age/Cor/CoreMain.cpp:1146 ]: Checking whether to disconnect long-running connections for process 27108, application /var/www/aka/addMore (development)

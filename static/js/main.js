@@ -52,10 +52,8 @@ $(document).ready(function(){
       });
     }
   });
-});
 
   $("#dismiss").click(function() {
     $(".screen-cover").css('display', 'none');
   });
 });
-
