@@ -22,7 +22,7 @@ $(document).ready(function(){
 
 
   }
-  $("button").click(function(){
+  $("#submit").click(function(){
     const title = $("#title").val().trim()
     const description = $("#description").val().trim()
     const client = $("#client").val()
@@ -32,7 +32,7 @@ $(document).ready(function(){
     if (!title || !description || !client || !target_date) {
       error_display(title, description, client_priority, target_date)
     } else {
-      const origin   = window.location.origin;
+      const origin = window.location.origin;
       $.ajax({
         type: 'POST',
         url: origin + "/feature-request",
@@ -46,9 +46,16 @@ $(document).ready(function(){
           ClientPriority: client_priority
         }),
         success: function(result){
-          console.log(result)
+          $(".screen-cover").css('display', 'flex');
+          $(window).scrollTop(0);
         }
       });
     }
   });
 });
+
+  $("#dismiss").click(function() {
+    $(".screen-cover").css('display', 'none');
+  });
+});
+
