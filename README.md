@@ -78,6 +78,20 @@ pytest
 
 ```
 
+## Deploying to web
+
+```
+This app has been deployed to the web using passenger (and apache). See [a simple guide](https://www.phusionpassenger.com/library/walkthroughs/deploy/python/) for deploying flask app on Ubuntu.
+The two required files are Passengerfile.json and passenger_wsgi.py.
+In Passengerfile, we specify deployment configs. Then in passenger_wsgi, we create our app instance.
+You can name passenger_wsgi anything you want, just ensure you also use the same name in Passengerfile.
+With all setup completed, running the app is as simple as executing this command in the terminal
+  passenger start
+
+Currently, this app is made available to public by port forwarding. It is hosted locally and exposed to public using [localtunnel](https://localtunnel.github.io/www/). 
+```
+
+
 ## Contributing to the project
 
 If you are interested in participating in the development of AddMore, your ideas and contributions are welcome! It is always better to start by identifying a specific part of the app you can make better. Taking a look at the limitations is a good starting point. You can reach out to the team through the comments or [create a new issue](https://github.com/obinnaeye/addMore/issues/new).
