@@ -7,7 +7,7 @@
  
  A simple app used internally in an organization to record client's feature requests. A "feature request" is a request for a new feature that will be added onto an existing piece of software.
 
-View the app [here](https://link-coming-soon)
+View the app [here](http://feature-request.localtunnel.me)
 
   **_Features_**
 The app has the following main features:
@@ -82,6 +82,20 @@ python migrateTest.py db upgrade --directory travisMigrations
 coverage run --source=resources,Model,app -m pytest  (this generates the coverage and also ensures that imports are not skipped in coverage)
 coverage report (this displays the coverage report)
 ```
+
+## Deploying to web
+
+```
+This app has been deployed to the web using passenger (and apache). See [a simple guide](https://www.phusionpassenger.com/library/walkthroughs/deploy/python/) for deploying flask app on Ubuntu.
+The two required files are Passengerfile.json and passenger_wsgi.py.
+In Passengerfile, we specify deployment configs. Then in passenger_wsgi, we create our app instance.
+You can name passenger_wsgi anything you want, just ensure you also use the same name in Passengerfile.
+With all setup completed, running the app is as simple as executing this command in the terminal
+  passenger start
+
+Currently, this app is made available to public by port forwarding. It is hosted locally and exposed to public using [localtunnel](https://localtunnel.github.io/www/). 
+```
+
 
 ## Contributing to the project
 

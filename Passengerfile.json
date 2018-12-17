@@ -1,0 +1,8 @@
+{
+  "app_type": "wsgi",
+  "startup_file": "passenger_wsgi.py",
+  "environment": "production",
+  "port": 81,
+  "daemonize": true,
+  "user": "aka"
+}
