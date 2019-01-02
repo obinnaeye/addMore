@@ -7,7 +7,7 @@
  
  A simple app used internally in an organization to record client's feature requests. A "feature request" is a request for a new feature that will be added onto an existing piece of software.
 
-View the app [here](http://feature-request.localtunnel.me)
+View the app [here](https://addmore.herokuapp.com)
 
   **_Features_**
 The app has the following main features:
