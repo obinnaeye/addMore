@@ -9,7 +9,8 @@
 
 View the app [here](https://addmore.herokuapp.com)
 
-  **_Features_**
+ **_Features_**:
+ 
 The app has the following main features:
 * A UI where the user can submit a new feature request
 * A UI where the user can see all feature requests
