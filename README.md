@@ -14,7 +14,7 @@ View the app [here](https://addmore.herokuapp.com)
 The app has the following main features:
 * A UI where the user can submit a new feature request
 * A UI where the user can see all feature requests
-* The Client Priority of a feature is auto-rearranged in a case where a new feature request request by a client has a conflicting priority with an existing request. 
+* The Client Priority of a feature is auto-rearranged in a case where a new feature request by a client has a conflicting priority with an existing request. 
     * Case 1: When there are feature requests a, b, c, d with priorities 1, 2, 3, 4 respectively. If a new feature request e is created with priority 3, we will have a - 1, b - 2, e - 3, c - 4, d - 5. Request e has a priority of 3 while c and d changes to 4 and 5 respectively.
     * Case 2: When there are feature requests a, b, c, d with priorities 1, 2, 4, 5 respectively. If a new feature request e is created with priority 3, we will have a - 1, b - 2, e - 3, c - 4, d - 5. Request e has a priority of 3 while c and d remains 4 and 5 respectively.
     * Case 3: When there are feature requests a, b, c, d with priorities 1, 2, 4, 5 respectively. If a new feature request e is created with priority 1, we will have e - 1, a - 2, b - 3, c - 4, d - 5. Request e has a priority of 1 while a and b changes to 2 and 3 respectively, c and d remains unchanged.
